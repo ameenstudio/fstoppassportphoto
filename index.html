@@ -37,6 +37,17 @@
       -webkit-font-smoothing: antialiased;
     }
   </style>
+    <script>
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  window.addEventListener('load', function () {
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+  });
+</script>
 </head>
 <body class="bg-surface text-dark selection:bg-black selection:text-white">
 <!-- Minimal Header -->
