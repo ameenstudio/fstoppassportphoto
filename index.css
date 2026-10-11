@@ -1,0 +1,78 @@
+/* Gallery Section Styles */
+.gallery-section {
+    width: 100%;
+    padding: 60px 20px;
+    background-color: #f8fafc;
+    box-sizing: border-box;
+}
+
+.gallery-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #111111;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Responsive adjustment for tablet/mobile screens */
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.gallery-card {
+    background: #ffffff;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Uniform container so US, Canada, and 35x45mm photos align neatly */
+.gallery-photo-box {
+    width: 100%;
+    height: 240px;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gallery-photo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Prevents cropping on different passport aspect ratios */
+    display: block;
+}
+
+.gallery-photo-type {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
